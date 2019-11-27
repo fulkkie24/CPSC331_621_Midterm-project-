@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Denk+One);
+.play {
+  color: #ffba16;
+  font-family: 'Denk One', sans-serif;
+  font-size: 65px;
+  letter-spacing: 0.1em;
+  padding: 10px 0;
+  -moz-transform: skew(-15deg) rotate(2deg);
+  -ms-transform: skew(-15deg) rotate(2deg);
+  -webkit-transform: skew(-15deg) rotate(2deg);
+  transform: skew(-15deg) rotate(2deg);
+  text-shadow:
+    0 1px #ff9b0d,
+    1px 0 #f79100,
+    1px 2px #ff9b0d,
+    2px 1px #f79100,
+    2px 3px #ff9b0d,
+    3px 2px #f79100,
+    3px 4px #ff9b0d,
+    4px 3px #f79100,
+    4px 5px #ff9b0d,
+    5px 6px #f79100,
+    6px 7px 5px #ff9b0d;
+  -webkit-text-stroke: 0.5px #ffcf5d;
+}
+
+.play .pink {
+  letter-spacing: -1px;
+  color: #ff539f;
+  text-shadow:
+    0 1px #f7046f,
+    1px 0 #e50568,
+    1px 2px #f7046f,
+    2px 1px #e50568,
+    2px 3px #f7046f,
+    3px 2px #e50568,
+    3px 4px #f7046f,
+    4px 3px #e50568,
+    4px 5px #f7046f,
+    5px 6px #e50568,
+    6px 7px 5px #f7046f;
+  -webkit-text-stroke: 0.5px #ff9cc8;
+}
+
+.play .blue {
+  color: #19a0ee;
+  text-shadow:
+    0 1px #0096ec,
+    1px 0 #0087d4,
+    1px 2px #0096ec,
+    2px 1px #0087d4,
+    2px 3px #0096ec,
+    3px 2px #0087d4,
+    3px 4px #0096ec,
+    4px 3px #0087d4,
+    4px 5px #0096ec,
+    5px 6px #0087d4,
+    6px 7px 5px #0096ec;
+  -webkit-text-stroke: 0.5px #68c8ff;
+}
+
+.play .green {
+  color: #07ed1c;
+  text-shadow:
+    0 1px #02d315,
+    1px 0 #00bb12,
+    1px 2px #02d315,
+    2px 1px #00bb12,
+    2px 3px #02d315,
+    3px 2px #00bb12,
+    3px 4px #02d315,
+    4px 3px #00bb12,
+    4px 5px #02d315,
+    5px 6px #00bb12,
+    6px 7px 5px #02d315;
+  -webkit-text-stroke: 0.5px #5efd6d;
+}
+
+/* Read more: http://ibrahimjabbari.com */
