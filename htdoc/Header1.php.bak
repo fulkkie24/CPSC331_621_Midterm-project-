@@ -1,0 +1,209 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> KuHug NarkAel </TITLE>
+
+<style>
+h1 {
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.circle{ 
+height: 250;  width: 250; border: 1px solid #F0F8FF; border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+	.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 8px 8px;
+  cursor: pointer;
+}
+
+hr.pa {
+  border-top: 3px dashed red;
+}
+input.sao{
+
+	width: 60%;
+}
+
+tr.pa1 {
+  border-top: 2px dashed blue;
+}
+
+table.pa2 {
+  border: 3.5px dashed blue;
+  
+}
+
+
+
+	body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:#FA8072;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+</style>
+
+<script>
+ function num_key(evt){
+	var iKeyCode;
+	if(window.event){ // IE
+		iKeyCode = evt.keyCode	
+	}
+	else if(evt.which){ // Netscape/Firefox/Opera
+		iKeyCode = evt.which
+	}
+
+	if ((iKeyCode >= 48 && iKeyCode <= 57) || iKeyCode == 8 || iKeyCode == 46){  // 8 Backapace , 46 Delete
+	return true;
+	}
+	else{
+	return false;
+	}
+}
+
+function checkID(id) { 
+		if (id.length == 13){
+			for(i=0, sum=0; i < 12; i++){
+			sum += parseFloat(id.charAt(i))*(13-i); 
+			}
+			if ((11-sum%11)%10!=parseFloat(id.charAt(12))){
+			alert('รหัสบัตรประชาชนไม่ถูกต้อง');
+			document.getElementById("sp_result");
+			}
+			else {
+			document.getElementById("sp_result");
+			}
+		}
+}
+
+</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" href="css/S1.css">
+   <link rel="stylesheet" href="css/stylesheet.css">
+ <link rel="stylesheet"<link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js\jquery.js"></script>
+     <script src="js\bootstrap.min.js"></script>
+
+</HEAD>
+<center><body style="background-color:hsla(9, 100%, 64%, 0.1);"">
+
+<TABLE   align="center" width="1024" border="0">
+<TR>
+	<TD colspan="3" align="center" >
+	<IMG SRC="image/headerv1.jpg" WIDTH="1024" HEIGHT="160" BORDER="0" ALT="Header" style="border: 4px solid white;"></TD>
+</TR>
+
+<TR>
+	<TD colspan="3"  >
+
+<nav class="navbar navbar-inverse" style="background-color:white ; border: 4px solid white;" >
+  <div class="container-fluid"  >
+    <div class="navbar-header"  ></div>
+        <ul class="nav nav-tabs">
+        <!-- <li ><a href="index2.php">Home</a></li></font >
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href="ex.php#">แนะนำกิจกรรมดีๆ</a></li>
+        <li><a href="ex1.php">แนะนำสถานที่เที่ยว</a></li>
+		<li><a href="Singup.php">SING UP</a></li>
+		<li><a  href="Tablelist.php">TABLE LIST</a></li>
+		<li><a  href="index.html">INTRO</a></li>
+		<li><a  href="login.php">LOGING</a></li> -->
+
+
+	
+			<?php
+		
+			if (@$_SESSION["STATUS"] =="2") {?>
+			
+			
+			<li><a  href="index.php"><font face = "RSU" >Home</a></li></font>
+			<li><a href="ex.php"><font face = "RSU" >แนะนำกิจกรรมดีๆ</a></li></font>
+			<li><a href="ex1.php"><font face = "RSU" >แนะนำสถานที่เที่ยว</a></li></font>
+			<li><a href="profile.php"><font face = "RSU" >Profile BS</a></li></font>
+			<li><a href="singup.php"><font face = "RSU" >ADD User</a></li></font>
+			<li><a  href="Tablelist.php"><font face = "RSU" >TABLE LIST</a></li></font>
+			<li><a  href="LoGout.php"><font face = "RSU" >LOGOUT</a></li> </font>
+	
+
+			<?php	} else if (@$_SESSION["STATUS"] =="1") { ?>
+				
+				<li><a  href="index.php"><font face = "RSU" >Home</a></li></font>
+				<li><a href="ex.php"><font face = "RSU" >แนะนำกิจกรรมดีๆ</a></li></font>
+				<li><a href="ex1.php"><font face = "RSU" >แนะนำสถานที่เที่ยว</a></li></font>
+				<li><a href="UserProf.php"><font face = "RSU" >UserProfile</a></li></font>
+				<li><a  href="LoGout.php"><font face = "RSU" >LOGOUT</a></li></font>
+
+			<?php	} else  if(@$_SESSION["STATUS"] =="") { ?>
+				
+				<li><a  href="index.php"><font face = "RSU" >Home</a></li></font>
+				<li><a href="ex.php"><font face = "RSU" >แนะนำกิจกรรมดีๆ</a></li></font>
+				<li><a href="ex1.php"><font face = "RSU" >แนะนำสถานที่เที่ยว</a></li></font>
+				<li><a href="singup.php"><font face = "RSU" >SINGUP</a></li></font>
+				<li><a  href="login.php"><font face = "RSU" >LOGIN</a></li></font>
+									<?php }?>
+					
+	
+
+		<!--<?php	if($_SESSION["STATUS"] !=""){	?>
+		<li><a  href="index.html">INTRO</a></li>
+		<li><a href="ex.php">แนะนำกิจกรรมดีๆ</a></li>
+        <li><a href="ex1.php">แนะนำสถานที่เที่ยว</a></li>
+		<li><a  href="login.php">LOGOUT</a></li>
+		<li><a href="singup.php">SINGUP</a></li>
+	
+		 
+		<?php }?> -->
+
+		        </ul>
+       </div>
+  </div>
+</nav>
+
+	</TD>
+</TR>
+<TD width="1500" style="border: 5px solid white;" >
